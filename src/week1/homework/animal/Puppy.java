@@ -6,34 +6,27 @@ package week1.homework.animal;
 public class Puppy extends Dog{
     @Override
     public void jump() {
-        System.out.println("Puppy is jumping");
+        System.out.println(name + " is jumping");
     }
 
     @Override
     public void ran() {
-        System.out.println("Puppy is running");
+        System.out.println(name + " is running");
     }
 
     @Override
     public void bite() {
-        System.out.println("Puppy is biting");
+        System.out.println(name + " is biting");
     }
 
     @Override
     public void voice() {
-        System.out.println("Puppy Wof wof");
+        System.out.println(name + " Wof wof");
     }
 
     @Override
     public void printName() {
         super.printName();
-    }
-
-    public static void main(String[] args) {
-        Animal puppy = new Puppy();
-        puppy.name = "Puppy";
-
-        puppy.jump();
     }
 
 }
