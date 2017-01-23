@@ -1,4 +1,6 @@
-package week1.day1;
+package week1.day2;
+
+import week1.day1.Student;
 
 /**
  * Created by serhiim on 22-Jan-17.
@@ -39,7 +41,7 @@ public class Group {
     }
 
     public void addStudent(Student student){
-        for (int i = 0; i < students.length-1; i++) {
+        for (int i = 0; i < students.length; i++) {
             if (students[i] == null){
                 students[i] = student;
                 break;

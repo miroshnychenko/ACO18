@@ -1,4 +1,4 @@
-package week1.day1;
+package week1.day2;
 
 /**
  * Created by serhiim on 22-Jan-17.
@@ -26,9 +26,7 @@ public class University {
         for (int i = 0; i < groups.length; i++) {
             for (int j = 0; j < groups[i].getStudents().length; j++) {
                 System.out.println(groups[i].getStudents()[j].studentToString());
-
             }
-
         }
     }
 }

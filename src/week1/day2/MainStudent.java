@@ -1,9 +1,13 @@
-package week1.day1;
+package week1.day2;
+
+import week1.day1.Student;
+import week1.day2.Group;
+import week1.day2.University;
 
 /**
  * Created by serhiim on 22-Jan-17.
  */
-public class Main {
+public class MainStudent {
     public static void main(String[] args) {
         Student student1 = new Student("Ivan", "Petrov", 20);
         Student student2 = new Student("Petr", "Ivanov", 21);
@@ -23,15 +27,15 @@ public class Main {
         Group group2 = new Group("Group 2");
         group2.setStudents(students2);
 
-//        Group group3 = new Group("Group 3");
+        Group group3 = new Group("Group 3");
 
-//        Student[] students = new Student[2];
-//        group3.setStudents(students);
-//
-//        group3.addStudent(student8);
-//        group3.addStudent(student1);
+        Student[] students = new Student[2];
+        group3.setStudents(students);
 
-        Group[] groups = {group1, group2};
+        group3.addStudent(student8);
+        group3.addStudent(student1);
+
+        Group[] groups = {group1, group2, group3};
 
 
         University university = new University("KPI");
@@ -49,9 +53,9 @@ public class Main {
         group2.groupToString();
         System.out.println();
 
-//        System.out.println("Show group 3");
-//        group3.groupToString();
-//        System.out.println();
+        System.out.println("Show group 3");
+        group3.groupToString();
+        System.out.println();
 
         System.out.println("Show groups");
         university.showGroups();
