@@ -58,8 +58,8 @@ public class Car {
         return wheels;
     }
 
-    public String getModel() {
-        return model;
+    public void printModel() {
+        System.out.println("Car model is " + model);;
     }
 
     public void setFuelLevel(int fuelLevel) {
@@ -76,5 +76,9 @@ public class Car {
 
     public Wheel[] getWheels() {
         return wheels;
+    }
+
+    public int getFuelLevel() {
+        return fuelLevel;
     }
 }
