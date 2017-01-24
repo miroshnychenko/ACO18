@@ -31,7 +31,6 @@ public class MainBouquet {
         System.out.println("******************");
         System.out.println("Print flowers in bouquet");
         System.out.println("******************");
-        System.out.println("Bouquet price is: " + bouquet.getPrice());
         System.out.println(bouquet.bouquetToString());
         System.out.println();
 
@@ -39,6 +38,7 @@ public class MainBouquet {
         System.out.println("Get bouquet price");
         System.out.println("******************");
         System.out.println("Bouquet price is: " + bouquet.getPrice());
+        System.out.println(bouquet.getPrice());
         System.out.println();
 
         System.out.println("******************");

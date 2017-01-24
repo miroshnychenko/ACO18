@@ -27,7 +27,7 @@ public class Bouquet {
     }
 
     public void countBouquetPrice() {
-
+        price = 0;
         for (int i = 0; i < accessories.length; i++) {
             price += accessories[i].getPrice();
         }
@@ -71,13 +71,14 @@ public class Bouquet {
     }
 
     public String bouquetToString(){
-        String flowersStr = "";
+        StringBuilder builder = new StringBuilder();
         for (int i = 0; i < flowers.length; i++) {
             if (flowers[i] == null){
                 continue;
             }
-            flowersStr += flowers[i].flowerToString()+"\n";
+            builder.append(flowers[i].flowerToString());
+            builder.append("\n");
         }
-        return flowersStr;
+        return builder.toString();
     }
 }
