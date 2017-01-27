@@ -10,9 +10,6 @@ public abstract class Surgeon implements Doctor{
     protected int experience;
     protected int surgeryCount;
 
-    public Surgeon() {
-    }
-
     public Surgeon(String name, int experience, int surgeryCount) {
         this.name = name;
         this.experience = experience;
