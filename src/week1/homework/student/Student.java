@@ -1,9 +1,12 @@
 package week1.homework.student;
 
+import java.util.Comparator;
+import java.util.Objects;
+
 /**
  * Created by serhiim on 23-Jan-17.
  */
-public class Student {
+public class Student implements Comparable{
 
     private String name;
     private String surname;
@@ -25,6 +28,17 @@ public class Student {
         if (name == null || name.isEmpty()) return;
         this.name = name;
     }
+
+    @Override
+    public int compareTo(Object o) {
+        if (this == o) return 0;
+        if (o != null && o instanceof Student){
+            Student temp = (Student) o;
+            return this.name.compareTo(temp.name);
+        }
+        return -1;
+    }
+
     @Override
     public String toString() {
         return String.format("Student name - %s, student surname - %s, age - %d", name, surname, age);
@@ -42,6 +56,5 @@ public class Student {
         if (!name.equals(student.name)) return false;
         return surname.equals(student.surname);
     }
-
 
 }

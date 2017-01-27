@@ -1,5 +1,8 @@
 package week1.homework.student;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 /**
  * Created by serhiim on 24-Jan-17.
  */
@@ -45,5 +48,10 @@ public class StudentMain {
         System.out.println(group.toString());
         System.out.println();
 
+        System.out.println("******************");
+        System.out.println("Sort students Comparable");
+        System.out.println("******************");
+        group.sortStudentCompareble();
+        System.out.println(group.toString());
     }
 }

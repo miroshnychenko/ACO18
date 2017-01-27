@@ -1,5 +1,7 @@
 package week1.homework.student;
 
+import java.util.Arrays;
+
 /**
  * Created by serhiim on 23-Jan-17.
  */
@@ -92,5 +94,9 @@ public class Group {
                 }
             }
         }
+    }
+
+    public void sortStudentCompareble(){
+        Arrays.sort(students);
     }
 }
