@@ -14,7 +14,7 @@ public class TestStudent {
     private static void testStudentToString(){
         Student student1 = new Student("qwe", "ewq", 23);
         String expected = "Student name - qwe, student surname - ewq, age - 23";
-        String actual = student1.studentToString();
+        String actual = student1.toString();
         assert actual.equals(expected):"studentToString test failed. \nActual: " + actual + "\nExpected: " + expected;
     }
 }

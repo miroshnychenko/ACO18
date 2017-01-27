@@ -28,9 +28,9 @@ public class TestGroup {
         String expected =
                 "Student name - qwe, student surname - ewq, age - 23\n" +
                 "Student name - asd, student surname - dsa, age - 22\n";
-        String actual = group.groupToString();
+        String actual = group.toString();
 
-        assert actual.equals(expected):"groupToString test fail. \nActual: \n" + actual + "\nExpected: \n" + expected;
+        assert actual.equals(expected):"toString test fail. \nActual: \n" + actual + "\nExpected: \n" + expected;
     }
 
     private static void testGroupToString2() {
@@ -40,9 +40,9 @@ public class TestGroup {
         Group group = new Group("Group1", students);
 
         String expected = "Student name - asd, student surname - dsa, age - 22\n";
-        String actual = group.groupToString();
+        String actual = group.toString();
 
-        assert actual.equals(expected):"groupToString with Student = null test fail. \nActual: \n" + actual + "\nExpected: \n" + expected;
+        assert actual.equals(expected):"toString with Student = null test fail. \nActual: \n" + actual + "\nExpected: \n" + expected;
 
     }
 
@@ -117,17 +117,17 @@ public class TestGroup {
         Student actualStudent4 = group.getStudents()[3];
 
         assert expectedStudent1.equals(actualStudent1):"sortStudents test failed with Student 1. " +
-                "\nActual student: " + actualStudent1.studentToString() +
-                "\nExpected student: " + expectedStudent1.studentToString();
+                "\nActual student: " + actualStudent1.toString() +
+                "\nExpected student: " + expectedStudent1.toString();
         assert expectedStudent2.equals(actualStudent2):"sortStudents test failed with Student 2. " +
-                "\nActual student: " + actualStudent2.studentToString() +
-                "\nExpected student: " + expectedStudent2.studentToString();
+                "\nActual student: " + actualStudent2.toString() +
+                "\nExpected student: " + expectedStudent2.toString();
         assert expectedStudent3.equals(actualStudent3):"sortStudents test failed with Student 3. " +
-                "\nActual student: " + actualStudent3.studentToString() +
-                "\nExpected student: " + expectedStudent3.studentToString();
+                "\nActual student: " + actualStudent3.toString() +
+                "\nExpected student: " + expectedStudent3.toString();
         assert expectedStudent4.equals(actualStudent4):"sortStudents test failed with Student 4. " +
-                "\nActual student: " + actualStudent4.studentToString() +
-                "\nExpected student: " + expectedStudent4.studentToString();
+                "\nActual student: " + actualStudent4.toString() +
+                "\nExpected student: " + expectedStudent4.toString();
 
 
 

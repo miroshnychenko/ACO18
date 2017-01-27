@@ -15,7 +15,7 @@ public class StudentMain {
         System.out.println("******************");
         System.out.println("Print all students:");
         System.out.println("******************");
-        System.out.println(group.groupToString());
+        System.out.println(group.toString());
 
         System.out.println("******************");
         System.out.println("Search student:");
@@ -34,7 +34,7 @@ public class StudentMain {
         System.out.println("Sort Students");
         System.out.println("******************");
         group.sortStudentsByName();
-        System.out.println(group.groupToString());
+        System.out.println(group.toString());
         System.out.println();
 
         System.out.println("******************");
@@ -42,7 +42,8 @@ public class StudentMain {
         System.out.println("******************");
         Student student5 = new Student("fgh", "hgf", 25);
         group.addStudent(student5);
-        System.out.println(group.groupToString());
+        System.out.println(group.toString());
         System.out.println();
+
     }
 }

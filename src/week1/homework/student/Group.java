@@ -8,9 +8,6 @@ public class Group {
     private String name;
     private Student[] students;
 
-    public Group() {
-    }
-
     public Group(String name, Student[] students) {
         if (name == null || name.isEmpty()) return;
         if (students == null) return;
@@ -23,14 +20,14 @@ public class Group {
         this.students = students;
     }
 
-
-    public String groupToString() {
+    @Override
+    public String toString() {
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < students.length; i++) {
             if(students[i] == null){
                 continue;
             }
-            builder.append(students[i].studentToString());
+            builder.append(students[i].toString());
             builder.append("\n");
         }
         return builder.toString();
@@ -47,6 +44,13 @@ public class Group {
     public void addStudent(Student student) {
         if (student == null){
             return;
+        }
+        for (int i = 0; i < students.length; i++) {
+            if (students[i].equals(student)){
+                System.out.println("This student is already in group");
+                return;
+            }
+
         }
         Student[] temp = new Student[students.length+1];
         System.arraycopy(students, 0, temp,0, students.length);
@@ -69,7 +73,7 @@ public class Group {
         String result = "";
         for (int i = 0; i < students.length; i++) {
             if (students[i] != null && students[i].getName().equals(studName)) {
-                return students[i].studentToString();
+                return students[i].toString();
             }
         }
         return "No such Student";

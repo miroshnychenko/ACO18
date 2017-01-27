@@ -11,10 +11,6 @@ public class Student {
     private double averageMark;
 
 
-    public Student (){
-
-    }
-
     public Student(String name, String surname, int age) {
         this.name = name;
         this.surname = surname;
@@ -29,11 +25,23 @@ public class Student {
         if (name == null || name.isEmpty()) return;
         this.name = name;
     }
-
-    public String studentToString() {
+    @Override
+    public String toString() {
         return String.format("Student name - %s, student surname - %s, age - %d", name, surname, age);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Student student = (Student) o;
+
+        if (age != student.age) return false;
+        if (Double.compare(student.averageMark, averageMark) != 0) return false;
+        if (!name.equals(student.name)) return false;
+        return surname.equals(student.surname);
+    }
 
 
 }
