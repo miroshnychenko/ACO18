@@ -12,8 +12,5 @@ public abstract class Book implements Pub {
         this.name = name;
         this.pagesCount = pagesCount;
     }
-
-    public Book(){
-
-    }
+    
 }
